@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+  </head>
+  <body>
+    <div class="container" id="container-gradient-background">
+      <div class="container-fluid">
+        <div class="row">
+          <div
+            class="col-md-12"
+            id="gradient-background"
+            style="text-align: center"
+          >
+            <h1 id="title">DOM Manipulation with Form</h1>
+            <p id="description">
+              (Create a Form and Table using HTML, CSS and DOM)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid" id="form_section">
+        <div class="row">
+          <!-- Form Start -->
+          <div class="col-md-4"></div>
+          <div class="col-md-4" id="gradient-background">
+            <form id="form" onsubmit="return false" 2>
+              <!-- First Name -->
+              <div class="mb-3 form-group">
+                <!-- <label for="firstname" class="form-label">First Name</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="first-name"
+                  placeholder="Your First Name"
+                  required
+                />
+              </div>
+              <!-- Last Name -->
+              <div class="mb-3 form-group">
+                <!-- <label for="lastname" class="form-label">Last Name</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="last-name"
+                  placeholder="Your Last Name"
+                  required
+                />
+              </div>
+              <!-- Email -->
+              <div class="mb-3 form-group">
+                <!-- <label for="email" class="form-label">Email Address</label> -->
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+              <!-- Address -->
+              <div class="mb-3 form-group">
+                <textarea
+                  class="form-control"
+                  id="address"
+                  rows="3"
+                  placeholder="Address"
+                ></textarea>
+              </div>
+              <!-- Pincode -->
+              <div class="mb-3 form-group">
+                <!-- <label for="pincode" class="form-label">Pincode</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pincode"
+                  placeholder="Pincode"
+                  required
+                />
+              </div>
+              <!-- State -->
+              <div class="mb-3">
+                <!-- <label for="state" class="form-label">State</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="state"
+                  placeholder="State"
+                  required
+                />
+              </div>
+              <!-- Country -->
+              <div class="mb-3">
+                <!-- <label for="country" class="form-label">Country</label> -->
+                <input
+                  type="text"
+                  class="form-control"
+                  id="country"
+                  placeholder="Country"
+                  required
+                />
+              </div>
+              <!-- Gender -->
+              <div class="mb-3">
+                <input
+                  type="radio"
+                  name="colors"
+                  value="Male"
+                  id="gender"
+                  checked
+                />Male
+                <input
+                  type="radio"
+                  name="colors"
+                  value="Female"
+                  id="gender"
+                />Female
+                <input
+                  type="radio"
+                  name="colors"
+                  value="Transgender"
+                  id="gender"
+                />Transgender
+              </div>
+              <!-- Choice of Food -->
+              <div class="btn-group">
+                <select
+                  class="form-select form-select-sm"
+                  aria-label="Small select example"
+                  multiple
+                  min="2"
+                  id="food"
+                  onsubmit="foodcheck()"
+                  required
+                >
+                  <option disabled>Choice of Food</option>
+                  <option value="1">India Cuisine</option>
+                  <option value="2">Chinese Cuisine</option>
+                  <option value="3">Mexican Cuisine</option>
+                  <option value="4">French Cuisine</option>
+                  <option value="5">Italian Cuisine</option>
+                </select>
+              </div>
+              <div>
+                <button
+                  type="submit"
+                  class="btn btn-primary mb-3"
+                  onclick="renderData()"
+                  id="submit"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-4"></div>
+          <!-- Form End -->
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="row" id="gradient-background">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <table class="table table-striped" id="agent_table">
+              <thead>
+                <tr>
+                  <th scope="col">S.No</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Pincode</th>
+                  <th scope="col">Gender</th>
+                  <th scope="col">State</th>
+                  <th scope="col">Country</th>
+                  <th scope="col">Food</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://app.zenclass.in/sheets/v1/js/zen/suite/bundle.js"></script>
+  </body>
+</html>

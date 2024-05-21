@@ -1,0 +1,61 @@
+#container-gradient-background {
+  background: linear-gradient(
+    175deg,
+    #14abad,
+    #513f0b,
+    #6ec1f1,
+    #62e8d4,
+    #2f2146
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 50s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#gradient-background {
+  background: linear-gradient(37deg, #c1ca2a, #f3ffa7, #5a9598, #cebbac);
+  background-size: 240% 240%;
+  animation: gradient-animation 36s ease infinite;
+  border-radius: 15px;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container-fluid {
+  padding: 25px;
+}
+
+input {
+  background-color: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid green !important;
+}
+
+table {
+  width: 100%;
+  /* table-layout: fixed; */
+  /* table-layout: auto; */
+
+  margin: 25px;
+}
